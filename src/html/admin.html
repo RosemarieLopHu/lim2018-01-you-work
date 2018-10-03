@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <link rel="icon" type="image/png" sizes="32x32" href="src/assets/img/LogoMark.png">
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="../css/main.css" />
+  
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <!-- icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+  <title>You Work</title>
+</head>
+
+<html>
+
+<body>
+
+  <div id="loginAdmin">
+    <form id="form-users">
+      <div class="form-group">
+        <label for="users-mame">Correo Electronico </label>
+        <input type="email" name="usersName" value="" class="form-control" id="usersLoginName" placeholder="Correo electrónico">
+      </div>
+      <div class="form-group">
+        <label for="users-last-name">Contraseña </label>
+        <input type="text" name="usersLastName" value="" class="form-control" id="usersLoginPassword" placeholder="Contraseña">
+      </div>
+      <input type="button" name="" value="Login" id="Enviar-Update">
+
+      <div class="ingresarConCuenta">¿No tienes cuenta?
+        <a class="entrar" id="btnRegisterAdmin">Regístrate</a>
+      </div>
+    </form>
+  </div>
+
+  <div class="col-sm-7" id="registerAdmin">
+    <form id="form-users">
+      <div>
+        <p class="h1">
+          Registrarse
+        </p>
+      </div>
+      <div class="form-group">
+        <label for="users-mame">Nombre </label>
+        <input name="userName" value="" class="form-control" id="usersName" placeholder="Nombre">
+      </div>
+      <div class="form-group">
+        <label for="users-mame">Empresa </label>
+        <input name="userName" value="" class="form-control" id="usersOffice" placeholder="Empresa">
+      </div>
+      <div class="form-group">
+        <label for="users-mame">Correo Electronico </label>
+        <input type="email" name="userName" value="" class="form-control" id="usersEmail" placeholder="Correo electrónico">
+      </div>
+      <div class="form-group">
+        <label for="users-last-name">Contraseña </label>
+        <input type="text" name="userPassword" value="" class="form-control" id="userPassword" placeholder="Contraseña">
+      </div>
+      <button type="button" name="button" id="Registro-Users">Registrar</button>
+      <button type="button" name="button" id="Login-Admin">Volver</button>
+    </form>
+  </div>
+
+<!-- script js -->
+<script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+<script src="main.js"></script>
+<script src="../js/firebase.js"></script>
+<script src="../js/admin.js"></script>
+
+</html>

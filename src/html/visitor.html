@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <link rel="icon" type="image/png" sizes="32x32" href="src/assets/img/LogoMark.png">
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <!-- icons and CSS -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="../css/style.css" />
+  <link rel="stylesheet" href="main.css">
+  <title>You Work</title>
+</head>
+
+<body>
+  <main>
+    <aside id="register-visitor">
+      <header id="header-principal">
+        <nav class="navbar navbar-light bg-app big-nav">
+          <a class="navbar-brand lite">
+            <img src="../assets/img/icons/identificacion-de-visitante.png" width="30" height="30" class="d-inline-block align-top"
+              alt="" /> Visitante
+          </a>
+          <form class="form-inline">
+            <button type="button" class="btn btn-outline-lite my-2 my-sm-0" id="btn-to-loggin-admin">Administrador</button>
+          </form>
+        </nav>
+      </header>
+      <form class="container">
+        <div class="form-group spaces">
+          <h2 class="text-center">Registro de visitas</h2>
+        </div>
+        <div class="form-group spaces">
+          <h6>Datos personales</h6>
+        </div>
+        <div class="form-group spaces">
+          <label>Nombre Completo</label>
+          <input id="txt-name-visitor" type="text" class="form-control" placeholder="Escribe tu nombre completo" />
+          <div class="text-center align-content-center no-spaces" id="wrong-name" hidden>
+            <label class="wrong-data">Nombre no es válido</label>
+          </div>
+        </div>
+        <div class="form-group spaces">
+          <label>DNI</label>
+          <input id="txt-dni-visitor" type="number" class="form-control" placeholder="Escribe tu DNI" />
+          <div class="text-center align-content-center no-spaces" id="wrong-dni" hidden>
+            <label class="wrong-data">el DNI no es válido</label>
+          </div>
+        </div>
+        <div class="form-group spaces">
+          <label>Celular</label>
+          <input id="txt-cel-visitor" type="number" class="form-control" placeholder="Escribe tu número de celular" />
+          <div class="text-center align-content-center" id="wrong-cel" hidden>
+            <label class="wrong-data">el número de celular no es válido</label>
+          </div>
+        </div>
+        <div class="align-content-center text-center spaces">
+          <button type="button" class="btn btn-app" id="btn-ok-register-visitor">Aceptar</button>
+        </div>
+      </form>
+    </aside>
+    <aside id="login-admin" style="display: none">
+      <header>
+        <nav class="navbar navbar-light bg-app big-nav">
+          <a class="navbar-brand lite">
+            <img src="../assets/img/icons/identificacion-de-visitante.png" width="30" height="30" class="d-inline-block align-top"
+              alt="" /> Visitor
+          </a>
+          <form class="form-inline">
+            <button type="button" class="btn btn-outline-lite my-2 my-sm-0" id="btn-to-main">Registrar Visita</button>
+          </form>
+        </nav>
+      </header>
+      <form class="container">
+        <div class="form-group spaces">
+          <h2 class="text-center">Inicia Sesión</h2>
+        </div>
+        <div class="align-content-center text-center spaces">
+          <img src="../assets/img/icons/telefono-inteligente.png" alt="icon" />
+        </div>
+        <div class="form-group spaces">
+          <label>Correo Electrónico</label>
+          <input type="email" class="form-control" placeholder="Escribe tu email" id="txt-email-admin" />
+          <div class="text-center align-content-center no-spaces" id="wrong-email" hidden>
+            <label class="wrong-data">el correo electrónico no es correcta</label>
+          </div>
+        </div>
+        <div class="form-group spaces">
+          <label>Contraseña</label>
+          <input type="password" class="form-control" placeholder="Escribe tu contraseña" id="txt-password-admin" />
+          <div class="text-center align-content-center" id="wrong-password" hidden>
+            <label class="wrong-data">la contraseña no es correcta</label>
+          </div>
+        </div>
+        <div class="align-content-center text-center spaces">
+          <button type="button" class="btn btn-app btn-group-lg" id="btn-ok-login-admin">Aceptar</button>
+        </div>
+      </form>
+    </aside>
+    <aside id="take-photo-visitor" style="display: none">
+      <header>
+        <nav class="navbar navbar-light bg-app big-nav">
+          <a class="navbar-brand lite">
+            <img src="img/icons/identificacion-de-visitante.png" width="30" height="30" class="d-inline-block align-top"
+              alt="" /> Visitor
+          </a>
+        </nav>
+      </header>
+      <form class="">
+        <div class="app row">
+          <div class="col"></div>
+          <div class="col-11">
+            <video id="camera-stream" style="display: flex"></video>
+            <img id="snap" src="../assets/img/icons/glyphicons-25-parents.png" alt="foto" style="display: none" />
+            <p id="error-message"></p>
+            <canvas id="canvass" style="display: none"></canvas>
+          </div>
+          <div class="col-sm-1"></div>
+        </div>
+        <div class="align-content-center text-center spaces">
+          <button type="button" class="btn btn-app btn-lg" id="delete-photo" hidden>Volver</button>
+          <button type="button" class="btn btn-app btn-lg" id="btn-ok-register" hidden>Aceptar</button>
+          <img width="50" height="50" src="../assets/img/icons/camara.png" alt="camara" id="take-photo" />
+        </div>
+      </form>
+    </aside>
+    <aside id="select-person-to-visit" style="display: none">
+      <header>
+        <nav class="navbar navbar-light bg-app big-nav">
+          <a class="navbar-brand lite">
+            <img src="../assets/img/icons/identificacion-de-visitante.png" width="30" height="30" class="d-inline-block align-top"
+              alt="" /> Visitor
+          </a>
+        </nav>
+      </header>
+      <h4 class="big-nav spaces">Selecciona a la persona a visitar</h4>
+      <div class="form-group container">
+        <select class="form-control spaces" name="selección de personas" id="select-worker">
+          <option value="">selección de personas</option>
+        </select>
+      </div>
+      <div class="align-content-center text-center spaces">
+        <button type="button" class="btn btn-app" id="btn-send-email" disabled>Enviar correo</button>
+      </div>
+    </aside>
+  </main>
+</body>
+<!-- Compiled and minified JavaScript -->
+<script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+<script src="main.js"></script>
+
+</html>
