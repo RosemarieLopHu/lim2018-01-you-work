@@ -1,4 +1,4 @@
-//valida la dirección de correo electrónico y la contraseña
+//validando  dirección de correo electrónico y contraseña
 const emailValidator = (string) => {
     emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
     emailRegex.test(string) ? answer = true : answer = false;

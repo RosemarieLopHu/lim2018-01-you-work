@@ -1,4 +1,4 @@
- // Initialize Firebase
+ // Initialize Firebase brindada por sdk
   var config = {
     apiKey: "AIzaSyASxNmOH-hhOELPFar0ekuZ4WmGrSdYdN8",
     authDomain: "youwork-440d4.firebaseapp.com",

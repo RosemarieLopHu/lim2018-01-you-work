@@ -1,28 +1,29 @@
 .logo {
-    text-align: center;
-  }
-  .background-dark {
-    background-color: #000000;
-  }
-  .container{
-    margin:0px auto 0px auto;
-  }
-  .center {
-    text-align: center;
-  }
-  .btn {
-    color: #2a2a2a;
-    font-size: 30px;
-    width: 300px;
-    height: 120px;
-  }
-  img {
-    width: 300px;
-    height: 300px;
-  }
-  .bienvenida {
-    color: #ffffff;
-    text-align: center;
-    font-size: 30px;
-  }
-  
+  text-align: center;
+}
+.background {
+  background-color: #2a2a2a;
+  background-image: url(../assets/img/Logo_YW.png)
+}
+.container{
+  margin:0px auto 0px auto;
+  text-align: center;
+}
+.center {
+  text-align: center;
+} 
+.btn {
+  color: #ffffff;
+  font-size: 30px;
+  width: 300px;
+  height: 120px;
+}
+img {
+  width: 300px;
+  height: 300px;
+}
+.bienvenida {
+  color: #ffffff;
+  text-align: center;
+  font-size: 30px;
+}

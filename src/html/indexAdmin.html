@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="shortcut icon" href="../assets/img/LogoMark.png" type="image/x-icon">
+  <title>YouWork</title>
+  <link rel="stylesheet" href="../css/admin.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+  <h1>Hola <span id="nameAdmin"></span> </h1>
+  <h2>Visitas de Externos</h2>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Hora Registro</th>
+        <th>Dni</th>
+        <th>Email</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Foto</th>
+      </tr>
+    </thead>
+    <tbody id="adminVisits">
+    </tbody>
+  </table>
+  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+  <script src="../js/firebase.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>
