@@ -1,7 +1,7 @@
 document.getElementById('users-oficina').addEventListener("change", changeOffice);
 function changeOffice() {
   let employeeOptions = document.getElementById('users-anfitrion');
-  employeeOptions.innerText = '';
+  employeeOptions.innerHTML = '';
   let officeSelect = document.getElementById('users-oficina');
   let officeName = officeSelect.options[officeSelect.selectedIndex].value;
   firebase.database().ref('Empleados/').on('value', function (snap) {
