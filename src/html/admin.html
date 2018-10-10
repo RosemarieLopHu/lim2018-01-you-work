@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,57 +8,72 @@
   <title>YouWork</title>
   <link rel="stylesheet" href="../css/admin.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
+
 <body>
-
-  <div id="loginAdmin">
-    <form id="form-users">
-      <div class="form-group">
-        <label for="users-mame">Correo Electronico </label>
-        <input type="email" name="usersName" value="" class="form-control" id="usersLoginName" placeholder="Correo electrónico">
+  <!-- LOGIN -->
+  <nav class="navbar navbar-inverse">
+    <div class="collapse navbar-collapse">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="../index.html">YouWork</a>
       </div>
-      <div class="form-group">
-        <label for="users-last-name">Contraseña </label>
-        <input type="text" name="usersLastName" value="" class="form-control" id="usersLoginPassword" placeholder="Contraseña">
-      </div>
-      <input type="button" name="" value="Login" id="Enviar-Update">
+      <form id="signin" class="navbar-form navbar-right" role="form">
+        <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+          <input id="email" type="email" class="form-control" name="email" value="" placeholder="Email Address">
+        </div>
+        <br>
+        <br>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+          <input id="password" type="password" class="form-control" name="password" value="" placeholder="Password">
+        </div>
+        <br>
+        <br>
+        <button onclick="iniciar()" type="submit" class="btn btn-primary">Iniciar sesion</button>
+      </form>
+    </div>
+  </nav>
 
-      <div class="ingresarConCuenta">¿No estás registrado?
-          <a class="entrar" id="btnRegisterAdmin">Regístrate</a>
-      </div>
-    </form>
-  </div>
+  <div class="container">
+    <div class="col-sm-10" id="registerAdmin">
 
-  <div class="col-sm-7" id="registerAdmin">
-    <form id="form-users">
       <div>
         <p class="h1">
           Registrate YouWork
         </p>
       </div>
-      <div class="form-group">
-        <label for="users-mame">Nombre </label>
-        <input name="userName" value="" class="form-control" id="usersName" placeholder="Nombre">
+      <div class="container" id="mainSection">
+        <div class="row">
+          <div class="col-sm-10">
+            <form id="form-users">
+              <div class="form-group">
+                <label for="users-email">E-mail</label>
+                <input type="text" value="" class="form-control" id="email2">
+                <span id="emailOK"></span>
+              </div>
+              <br>
+              <div class="form-group">
+                <label for="password">Contraseña</label>
+                <input type="password" value="" class="form-control" id="password2">
+              </div>
+          </div>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="users-mame">Empresa </label>
-        <input name="userName" value="" class="form-control" id="usersOffice" placeholder="Empresa">
-      </div>
-      <div class="form-group">
-        <label for="users-mame">Correo Electronico </label>
-        <input type="email" name="userName" value="" class="form-control" id="usersEmail" placeholder="Correo electrónico">
-      </div>
-      <div class="form-group">
-        <label for="users-last-name">Contraseña </label>
-        <input type="text" name="userPassword" value="" class="form-control" id="userPassword" placeholder="Contraseña">
-      </div>
-      <button type="button" name="button" id="Registro-Users">Registrarse</button>
-      <button type="button" name="button" id="Login-Admin">Volver</button>
-    </form>
+      <button onclick="crear()" type="button" name="button" id="Registro-Users">Crear cuenta</button>
+      <input type="button" onclick="history.back()" name="volver atrás" value="volver atrás">
+
+      </form>
+    </div>
   </div>
   <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
   <script src="../js/firebase.js"></script>
-  <script src="../js/admin.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="../js/signAdmin.js"></script>
 </body>
+
 </html>

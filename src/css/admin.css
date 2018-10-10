@@ -1,4 +1,13 @@
-#btnRegisterAdmin {
-    color :#424242;
-  }
-  
+body {
+	background: #eee !important;	
+}
+.navbar navbar-inverse{
+	margin: 20px;
+}
+.form-signin {
+  max-width: 380px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: #000;
+  border: 1px solid rgba(0,0,0,0.1);  
+}

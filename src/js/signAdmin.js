@@ -1,59 +1,49 @@
-document.getElementById('registerAdmin').style.display = 'none';
-document.getElementById('btnRegisterAdmin').addEventListener('click', () => {
-  document.getElementById('registerAdmin').style.display = 'block';
-  document.getElementById('loginAdmin').style.display = 'none';
-});
-document.getElementById('Login-Admin').addEventListener('click', () => {
-  document.getElementById('registerAdmin').style.display = 'none';
-  document.getElementById('loginAdmin').style.display = 'block';
-});
-document.getElementById('Registro-Users').addEventListener('click', () => {
-  adminRegister();
-});
-document.getElementById('Enviar-Update').addEventListener('click', () => {
-  loginAdmin();
-});
+function crear() {
+  let correo = document.getElementById('email2').value;
+  let contraseña = document.getElementById('password2').value
 
-//funcion para loguearse si ya tiene cuenta
-function loginAdmin() {
-  userLoginName = document.getElementById('usersLoginName').value;
-  userLoginPassword = document.getElementById('usersLoginPassword').value;
 
-  firebase.auth().signInWithEmailAndPassword(userLoginName, userLoginPassword)
-    .then(() => {
-      let currentAdminEmail = firebase.auth().currentUser.email;
-      localStorage.currentAdminEmail = currentAdminEmail;
-      console.log("Inicio de sesión exitosa");
-      window.location = "admin.html";
-    })
-    .catch((error) => {
-      console.log("Error de firebase > Código > " + error.code);
-      console.log("Error de firebase > Mensaje > " + error.message);
-    });
+
+  firebase.auth().createUserWithEmailAndPassword(correo, contraseña)
+  .then( window.location = "../html/indexAdmin.html")
+  .catch(function (error) {
+   
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // [START_EXCLUDE]
+    if (errorCode == 'auth/weak-password') {
+      
+      alert('The password is too weak.');
+    } else {
+      alert(errorMessage);
+    }
+    console.log(error);
+    // [END_EXCLUDE]
+  });
+  // [END createwithemail]
+
+  
 }
-//funcion para crearse una cuenta como administrador
-function adminRegister() {
-  emailAdmin = document.getElementById('usersEmail').value;
-  passwordAdmin = document.getElementById('userPassword').value;
 
-  firebase.auth().createUserWithEmailAndPassword(emailAdmin, passwordAdmin)
-    .then((usuario) => {
-      console.log("El registro de usuario fue exitoso");
-      let admin = firebase.auth().currentUser;
-      admin.updateProfile({ displayName: nameValue })
-        .catch((error) => {
-          console.log(error)
-        })
-    })
-    .catch((error) => {
-      console.log("Error de firebase > Código > " + error.code);
-      console.log("Error de firebase > Mensaje > " + error.message);
 
-    });
-  let empleado = {
-    employeeEmail: document.getElementById('usersEmail').value,
-    employeeName: document.getElementById('usersName').value,
-    employeeOficina: document.getElementById('usersOffice').value
+//usuario existente
+function iniciar (){
+
+firebase.auth().signInWithEmailAndPassword(email, password).then(window.location = "../html/indexAdmin.html").catch(function (error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  // [START_EXCLUDE]
+  if (errorCode === 'auth/wrong-password') {
+    alert('Wrong password.');
+  } else {
+    alert(errorMessage);
   }
-  firebase.database().ref('Empleados').push(empleado);
+  console.log(error);
+  document.getElementById('quickstart-sign-in').disabled = false;
+  // [END_EXCLUDE]
+});
+
 }
+ 
